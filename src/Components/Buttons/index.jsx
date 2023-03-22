@@ -25,5 +25,4 @@ const Bbutton = styled.div`
     font-family: 'League Spartan', sans-serif;
     font-weight: 700;
     font-size: 20px;
-    margin-left: 10px;
 `
