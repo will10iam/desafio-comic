@@ -1,23 +1,53 @@
+import React, { useEffect, useState } from "react"
+
 import styled from "styled-components"
+
+import api from "../../services/api"
 
 
 export default function CardPequeno(props) {
+    const [comics, setComics] = useState([])
+
+
+    useEffect(() => {
+        api
+            .get('/comics')
+            .then(response => {
+                setComics(response.data.data.results);
+            })
+            .catch(err => console.log(err));
+    }, [comics]);
+
     return (
         <>
-            <CardP>
-                <img src={props.thumbnail} alt="" />
-                <div className="infos">
-                    <h1>{props.title}</h1>
-                    <h2>{props.price}</h2>
-                </div>
-            </CardP>
+            <Grid>
+                {comics.map(comic => {
+                    return (
+                        <CardP key={comic.id}>
+                            <img
+                                src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
+                                alt={`Foto do ${comic.title}`}
+                            />
+                            <div className="infos">
+                                <h1>{comic.title}</h1>
+                                <h2>{props.price}</h2>
+                            </div>
+                        </CardP>
+                    )
+                })}
 
+            </Grid>
 
         </>
     )
 }
 
 // ==================================== STYLES ===============================//
+
+const Grid = styled.div`
+    display: grid;
+    grid-template-columns: 500px 500px 500px;
+`
 
 const CardP = styled.div`
     display: flex;
