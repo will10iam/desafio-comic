@@ -1,4 +1,4 @@
-import exampleimg from '../../Assets/exampleimg.png'
+
 import styled from 'styled-components'
 import Button from '../Buttons/index'
 

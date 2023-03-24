@@ -24,11 +24,12 @@ const HHeader = styled.div`
     height: 100px;
     background-color: #000000;
 
+
     & .logo {
         width: 50%;
         margin-left: 5em;
-        
     }
+        
 
     & .cart {
         width: 30%;

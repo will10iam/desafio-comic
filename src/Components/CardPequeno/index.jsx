@@ -45,8 +45,17 @@ export default function CardPequeno(props) {
 // ==================================== STYLES ===============================//
 
 const Grid = styled.div`
+    max-width: 1400px;
     display: grid;
-    grid-template-columns: 500px 500px 500px;
+    margin-top: 50px;
+    justify-items: center;
+
+    @media (min-width: 900px){
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+
 `
 
 const CardP = styled.div`

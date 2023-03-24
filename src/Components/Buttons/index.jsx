@@ -18,7 +18,7 @@ const Bbutton = styled.div`
     background-color: #F26722;
     border-radius: 8px;
     margin-top: 150px;
-    width: 120px;
+    width: max-content;
     text-align: center;
     padding: 10px;
     color: #fff;

@@ -1,4 +1,5 @@
 import CardGrande from "../../Components/CardGrande"
+import CardPequeno from "../../Components/CardPequeno"
 
 
 export default function Testes() {
@@ -6,7 +7,7 @@ export default function Testes() {
         <>
 
 
-            <CardGrande />
+            <CardPequeno />
 
         </>
     )
